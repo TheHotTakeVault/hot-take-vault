@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Last of Us – Season 2 | The Hot Take Vault</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #b36bff;
+    }
+    header {
+      background-color: #1f003d;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #d88aff;
+    }
+    nav a {
+      color: #b36bff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .review-section {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #8000ff33;
+    }
+    .review-section h3 {
+      color: #e2b2ff;
+    }
+    .review-section img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .review-section p {
+      color: #d8bfff;
+      font-size: 1.1em;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+    .glow-divider {
+      border: none;
+      height: 3px;
+      background: linear-gradient(to right, #d88aff, #b36bff, #d88aff);
+      box-shadow: 0 0 12px #b36bff;
+      margin: 60px auto;
+      width: 95%;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f003d;
+      color: #a680c8;
+    }
+    .floating-butterflies {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .trail-butterfly {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      filter: drop-shadow(0 0 10px #d88aff);
+    }
+    .trail-butterfly svg {
+      width: 100%;
+      height: 100%;
+    }
+    .trail-butterfly .wing.left {
+      fill: #f6aaff;
+      transform-origin: 50px 50px;
+      animation: flap 1s ease-in-out infinite alternate;
+    }
+    .trail-butterfly .wing.right {
+      fill: #b2f4ff;
+      transform-origin: 50px 50px;
+      animation: flap 1s ease-in-out infinite alternate;
+      animation-delay: 0.2s;
+    }
+    .trail-butterfly .body {
+      fill: #ffe8f6;
+      stroke: #fff0f7;
+      stroke-width: 0.5;
+    }
+    .trail-glitter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, #ffffffaa 0%, transparent 70%);
+      border-radius: 50%;
+      box-shadow: 0 0 6px #f0baff, 0 0 10px #f0baff;
+      animation: sparkleTrail 1.5s ease-in-out infinite;
+      opacity: 0.7;
+    }
+    .b1 { animation: roamAround1 28s infinite linear; }
+    .b2 { animation: roamAround2 30s infinite linear; }
+    .b3 { animation: roamAround3 26s infinite linear; }
+
+    @keyframes roamAround1 {
+      0% { top: 10%; left: 5%; }
+      25% { top: 30%; left: 60%; }
+      50% { top: 70%; left: 80%; }
+      75% { top: 40%; left: 40%; }
+      100% { top: 10%; left: 5%; }
+    }
+
+    @keyframes roamAround2 {
+      0% { top: 60%; left: 80%; }
+      25% { top: 20%; left: 60%; }
+      50% { top: 30%; left: 20%; }
+      75% { top: 70%; left: 40%; }
+      100% { top: 60%; left: 80%; }
+    }
+
+    @keyframes roamAround3 {
+      0% { top: 20%; left: 50%; }
+      25% { top: 40%; left: 10%; }
+      50% { top: 60%; left: 60%; }
+      75% { top: 30%; left: 90%; }
+      100% { top: 20%; left: 50%; }
+    }
+
+    @keyframes flap {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(10deg); }
+    }
+    @keyframes sparkleTrail {
+      0% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.4); }
+      100% { opacity: 0.6; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Hot Take Vault</h1>
+    <nav>
+      <a href="../1-index.html">Home</a>
+      <a href="../2-reviews.html">Reviews</a>
+      <a href="../6-about.html">About</a>
+      <a href="../7-contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Butterflies -->
+  <div class="floating-butterflies">
+    <div class="trail-butterfly b1">
+      <svg viewBox="0 0 100 100">
+        <g class="wings">
+          <path class="wing left" d="M50,50 C30,10 0,10 10,40 C20,70 40,70 50,50"/>
+          <path class="wing right" d="M50,50 C70,10 100,10 90,40 C80,70 60,70 50,50"/>
+        </g>
+        <circle class="body" cx="50" cy="50" r="4" />
+      </svg>
+      <div class="trail-glitter"></div>
+    </div>
+    <div class="trail-butterfly b2">
+      <svg viewBox="0 0 100 100">
+        <g class="wings">
+          <path class="wing left" d="M50,50 C30,10 0,10 10,40 C20,70 40,70 50,50"/>
+          <path class="wing right" d="M50,50 C70,10 100,10 90,40 C80,70 60,70 50,50"/>
+        </g>
+        <circle class="body" cx="50" cy="50" r="4" />
+      </svg>
+      <div class="trail-glitter"></div>
+    </div>
+    <div class="trail-butterfly b3">
+      <svg viewBox="0 0 100 100">
+        <g class="wings">
+          <path class="wing left" d="M50,50 C30,10 0,10 10,40 C20,70 40,70 50,50"/>
+          <path class="wing right" d="M50,50 C70,10 100,10 90,40 C80,70 60,70 50,50"/>
+        </g>
+        <circle class="body" cx="50" cy="50" r="4" />
+      </svg>
+      <div class="trail-glitter"></div>
+    </div>
+  </div>
+
+  <a href="javascript:history.back()" style="display:inline-block; margin: 20px auto; padding: 10px 20px; background-color:#1f003d; color:#d88aff; border-radius:8px; text-decoration:none; font-weight:bold;">← Go Back</a>
+
+  <section class="review-section">
+    <h3>📺 The Last of Us – Season 2: Slay or Nah?</h3>
+    <img src="2-the-last-of-us.jpg" alt="The Last of Us Poster">
+
+    <p>
+      Alright, let’s talk about <strong>The Last of Us – Season 2</strong>.
+
+      Everyone’s buzzing, the internet’s foaming at the mouth, and I had to see what the fuss was about.  
+      So... did it deliver another emotional rollercoaster like Season 1?  
+      Or was it just another overhyped sequel in fancy apocalypse clothes?
+
+      Buckle up, babes.
+    </p>
+    <p>
+      First off — yes, the production value still slaps.  
+      The scenery? Cinematic.  
+      The infected? Still crusty and gross in the best way.
+
+      But where’s the spark?
+
+      Ellie’s journey feels heavier, darker, and somehow more... sluggish.  
+      The pacing slowed down to molasses, and half the time I felt like I was watching a moody music video with fungus zombies lurking in the back.
+    </p>
+    <p>
+      Then there’s Abby — the gym rat everyone loves to hate.  
+      The show dives into her storyline, and girl, the internet ain’t ready for this debate again.  
+      Bold move? Yes.  
+      Effective? Meh.
+    </p>
+    <p>
+      And don’t even get me started on the flashbacks.  
+      Like babe, I came here for tension and heartbreak, not a tour through emotional trauma via grainy Instagram filters.  
+      Pedro Pascal as Joel is still daddy, but his presence this season? A ghostly whisper.
+    </p>
+    <p>
+      Final thoughts?  
+      <strong>The Last of Us – Season 2</strong> is trying hard to be prestige television with emotional depth and tragic beauty.
+
+      Some moments hit (like, tissues-out-hit), others sag like expired protein bars in a survival pack.
+
+      It’s not a total flop, but it’s giving moody filler with side-eye energy.
+
+      Watch it? Sure. Just lower your expectations and keep the popcorn salty.
+    </p>
+
+    <hr class="glow-divider">
+
+    <p style="color: #c999ff; font-style: italic;">
+      Mixed feelings? Same, bestie.  
+      But hey — if you're still holding onto hope, the trailer’s right here.  
+      Maybe you'll see what I didn't.
+    </p>
+    <iframe width="100%" height="315" 
+      src="https://www.youtube.com/embed/uLtkt8BonwM" 
+      title="The Last of Us Season 2 Trailer" 
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen 
+      style="border-radius: 10px; margin-top: 10px;">
+    </iframe>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Hot Take Vault. All sass reserved.</p>
+  </footer>
+</body>
+</html>
