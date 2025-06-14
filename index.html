@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Hot Take Vault</title>
+  <meta name="description" content="Welcome to The Hot Take Vault — where sass meets cinema. Unfiltered reviews, bold reactions, and unapologetic opinions on movies and TV shows." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="The Hot Take Vault" />
+  <meta property="og:description" content="Your sassiest source for brutally honest film and TV reviews. If it slays, we scream it. If it flops, we roast it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thehottakevault.github.io/hot-take-vault/" />
+  <meta property="og:image" content="https://thehottakevault.github.io/hot-take-vault/cover.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,11 +18,14 @@
       background-color: #121212;
       color: #b36bff;
       overflow-x: hidden;
+      position: relative;
     }
     header {
       background-color: #1f003d;
       padding: 20px;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
     header h1 {
       margin: 0;
@@ -33,14 +42,18 @@
     .hero {
       padding: 60px 20px;
       text-align: center;
-      background-color: #1a0033;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
     .intro-box {
       background-color: #1a1a1a;
       border-radius: 10px;
       padding: 40px 30px;
       max-width: 700px;
-      margin: 0 auto;
       box-shadow: 0 0 20px #8000ff33;
     }
     .intro-box h2 {
@@ -59,6 +72,8 @@
       padding: 20px;
       background-color: #1f003d;
       color: #a680c8;
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
@@ -71,26 +86,22 @@
       <a href="6-about.html">About</a>
       <a href="7-contact.html">Contact</a>
     </nav>
-  </header>
-
-  <section class="hero">
+  </header>  <section class="hero">
     <div class="intro-box">
       <h2>Unfiltered. Unbothered. Unapologetic.</h2>
       <p>
-        Welcome to <strong>The Hot Take Vault</strong> — the sassiest corner of the internet for brutally honest, pop-off reviews.
-        I’m <strong>Sophia Isabel</strong>, your go-to screen queen with zero chill and a highlighter-bright opinion on every movie or show.
+        Welcome to <strong>The Hot Take Vault</strong> — the sassiest corner of the internet for brutally honest, pop-off reviews.I’m <strong>Sophia Isabel</strong>, your go-to screen queen with zero chill and a highlighter-bright opinion on every movie or show.
 
-        If it slays, I’ll scream it.
-        If it flops, I’ll roast it.
+    If it slays, I’ll scream it.
+    If it flops, I’ll roast it.
 
-        This is where fake fans cry, overhyped blockbusters crumble, and underrated gems get their flowers.
+    This is where fake fans cry, overhyped blockbusters crumble, and underrated gems get their flowers.
 
-        You’ve been warned, darling.
-      </p>
-    </div>
-  </section>
+    You’ve been warned, darling.
+  </p>
+</div>
 
-  <footer>
+  </section>  <footer>
     <p>&copy; 2025 The Hot Take Vault. All sass reserved.</p>
   </footer>
 </body>
