@@ -68,26 +68,23 @@
       color: #a680c8;
       position: relative;
       z-index: 2;
-    }
-    .floating-icon {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      animation: floatAround 20s infinite ease-in-out;
-      opacity: 0.7;
-    }
-    @keyframes floatAround {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(100px, -80px) rotate(180deg); }
-      100% { transform: translate(0, 0) rotate(360deg); }
-    }
+    }.doodle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  z-index: 0;
+}
+
   </style>
 </head>
 <body>
-  <!-- Inline SVG Floating Icons -->
-  <svg class="floating-icon" style="top: 20%; left: 10%;" viewBox="0 0 24 24"><path fill="#ff8fd8" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"/></svg>
-  <svg class="floating-icon" style="top: 65%; left: 80%; animation-delay: 4s;" viewBox="0 0 24 24"><path fill="#f5e1ff" d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
-  <svg class="floating-icon" style="top: 40%; left: 45%; animation-delay: 2s;" viewBox="0 0 24 24"><path fill="#c999ff" d="M12 2C10 7 4 7 2 8c2 1 6 4 6 6s-4 5-6 6c2 1 8 1 10 6 2-5 8-5 10-6-2-1-6-4-6-6s4-5 6-6c-2-1-8-1-10-6z"/></svg> <header>
+  <!-- Still Girly Doodles as Inline SVG -->
+  <svg class="doodle" style="top: 15%; left: 10%;" viewBox="0 0 24 24"><path fill="#ff9bd1" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"/></svg>
+  <svg class="doodle" style="top: 20%; left: 85%;" viewBox="0 0 24 24"><path fill="#c999ff" d="M12 2C10 7 4 7 2 8c2 1 6 4 6 6s-4 5-6 6c2 1 8 1 10 6 2-5 8-5 10-6-2-1-6-4-6-6s4-5 6-6c-2-1-8-1-10-6z"/></svg>
+  <svg class="doodle" style="top: 75%; left: 5%;" viewBox="0 0 24 24"><path fill="#ffc2f1" d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z"/></svg>
+  <svg class="doodle" style="top: 80%; left: 90%;" viewBox="0 0 24 24"><path fill="#ffacf5" d="M6 2c0 1.5 2 3.5 6 6s6 4.5 6 6c0 2-2 2-4 2s-4-1-4-1-2 1-4 1-4 0-4-2c0-1.5 2-3.5 6-6s6-4.5 6-6c0-1-1-1.5-2-1.5s-2 1-2 1-1-1-2-1-2 .5-2 1.5z"/></svg>
+  <svg class="doodle" style="top: 45%; left: 50%;" viewBox="0 0 24 24"><path fill="#fbd0ff" d="M12 0C10.8 0 10 1 10 2s0 3-2 4-2 2-2 3c0 1.5 2 3 6 3s6-1.5 6-3c0-1-1-2-2-3s-2-3-2-4-1-2-2-2z"/></svg> <header>
     <h1>The Hot Take Vault</h1>
     <nav>
       <a href="1-index.html">Home</a>
