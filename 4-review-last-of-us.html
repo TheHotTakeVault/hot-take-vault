@@ -64,137 +64,18 @@
       background-color: #1f003d;
       color: #a680c8;
     }
-    .floating-butterflies {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .trail-butterfly {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      filter: drop-shadow(0 0 10px #d88aff);
-    }
-    .trail-butterfly svg {
-      width: 100%;
-      height: 100%;
-    }
-    .trail-butterfly .wing.left {
-      fill: #f6aaff;
-      transform-origin: 50px 50px;
-      animation: flap 1s ease-in-out infinite alternate;
-    }
-    .trail-butterfly .wing.right {
-      fill: #b2f4ff;
-      transform-origin: 50px 50px;
-      animation: flap 1s ease-in-out infinite alternate;
-      animation-delay: 0.2s;
-    }
-    .trail-butterfly .body {
-      fill: #ffe8f6;
-      stroke: #fff0f7;
-      stroke-width: 0.5;
-    }
-    .trail-glitter {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 8px;
-      height: 8px;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, #ffffffaa 0%, transparent 70%);
-      border-radius: 50%;
-      box-shadow: 0 0 6px #f0baff, 0 0 10px #f0baff;
-      animation: sparkleTrail 1.5s ease-in-out infinite;
-      opacity: 0.7;
-    }
-    .b1 { animation: roamAround1 28s infinite linear; }
-    .b2 { animation: roamAround2 30s infinite linear; }
-    .b3 { animation: roamAround3 26s infinite linear; }
-
-    @keyframes roamAround1 {
-      0% { top: 10%; left: 5%; }
-      25% { top: 30%; left: 60%; }
-      50% { top: 70%; left: 80%; }
-      75% { top: 40%; left: 40%; }
-      100% { top: 10%; left: 5%; }
-    }
-
-    @keyframes roamAround2 {
-      0% { top: 60%; left: 80%; }
-      25% { top: 20%; left: 60%; }
-      50% { top: 30%; left: 20%; }
-      75% { top: 70%; left: 40%; }
-      100% { top: 60%; left: 80%; }
-    }
-
-    @keyframes roamAround3 {
-      0% { top: 20%; left: 50%; }
-      25% { top: 40%; left: 10%; }
-      50% { top: 60%; left: 60%; }
-      75% { top: 30%; left: 90%; }
-      100% { top: 20%; left: 50%; }
-    }
-
-    @keyframes flap {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(10deg); }
-    }
-    @keyframes sparkleTrail {
-      0% { opacity: 0.7; transform: scale(1); }
-      50% { opacity: 0.3; transform: scale(1.4); }
-      100% { opacity: 0.6; transform: scale(1); }
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>The Hot Take Vault</h1>
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="../2-reviews.html">Reviews</a>
-      <a href="../6-about.html">About</a>
-      <a href="../7-contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="2-reviews.html">Reviews</a>
+      <a href="6-about.html">About</a>
+      <a href="7-contact.html">Contact</a>
     </nav>
   </header>
-
-  <!-- Butterflies -->
-  <div class="floating-butterflies">
-    <div class="trail-butterfly b1">
-      <svg viewBox="0 0 100 100">
-        <g class="wings">
-          <path class="wing left" d="M50,50 C30,10 0,10 10,40 C20,70 40,70 50,50"/>
-          <path class="wing right" d="M50,50 C70,10 100,10 90,40 C80,70 60,70 50,50"/>
-        </g>
-        <circle class="body" cx="50" cy="50" r="4" />
-      </svg>
-      <div class="trail-glitter"></div>
-    </div>
-    <div class="trail-butterfly b2">
-      <svg viewBox="0 0 100 100">
-        <g class="wings">
-          <path class="wing left" d="M50,50 C30,10 0,10 10,40 C20,70 40,70 50,50"/>
-          <path class="wing right" d="M50,50 C70,10 100,10 90,40 C80,70 60,70 50,50"/>
-        </g>
-        <circle class="body" cx="50" cy="50" r="4" />
-      </svg>
-      <div class="trail-glitter"></div>
-    </div>
-    <div class="trail-butterfly b3">
-      <svg viewBox="0 0 100 100">
-        <g class="wings">
-          <path class="wing left" d="M50,50 C30,10 0,10 10,40 C20,70 40,70 50,50"/>
-          <path class="wing right" d="M50,50 C70,10 100,10 90,40 C80,70 60,70 50,50"/>
-        </g>
-        <circle class="body" cx="50" cy="50" r="4" />
-      </svg>
-      <div class="trail-glitter"></div>
-    </div>
-  </div>
 
   <a href="javascript:history.back()" style="display:inline-block; margin: 20px auto; padding: 10px 20px; background-color:#1f003d; color:#d88aff; border-radius:8px; text-decoration:none; font-weight:bold;">← Go Back</a>
 
@@ -250,6 +131,7 @@
       But hey — if you're still holding onto hope, the trailer’s right here.  
       Maybe you'll see what I didn't.
     </p>
+
     <iframe width="100%" height="315" 
       src="https://www.youtube.com/embed/uLtkt8BonwM" 
       title="The Last of Us Season 2 Trailer" 
@@ -258,7 +140,6 @@
       allowfullscreen 
       style="border-radius: 10px; margin-top: 10px;">
     </iframe>
-
   </section>
 
   <footer>
