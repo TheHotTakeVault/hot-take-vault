@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://thehottakevault.github.io/index.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/index.html</loc>
   </url>
+
   <url>
-    <loc>https://thehottakevault.github.io/2-reviews.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/2-reviews.html</loc>
   </url>
+
   <url>
-    <loc>https://thehottakevault.github.io/3-review-evil-dead-rise.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/3-review-evil-dead-rise.html</loc>
   </url>
+
   <url>
-    <loc>https://thehottakevault.github.io/4-review-last-of-us.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/4-review-last-of-us.html</loc>
   </url>
+
   <url>
-    <loc>https://thehottakevault.github.io/5-review-sinners.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/5-review-sinners.html</loc>
   </url>
+
   <url>
-    <loc>https://thehottakevault.github.io/6-about.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/6-about.html</loc>
   </url>
+
   <url>
-    <loc>https://thehottakevault.github.io/7-contact.html</loc>
+    <loc>https://thehottakevault.github.io/hot-take-vault/7-contact.html</loc>
   </url>
 
 </urlset>
