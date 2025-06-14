@@ -2,10 +2,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2-Reviews – The Hot Take Vault</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>Reviews – The Hot Take Vault</title>
+  <meta name="description" content="Explore brutally honest and sassy reviews of the latest and classic movies & TV shows. Unfiltered takes only at The Hot Take Vault.">
+  <meta name="keywords" content="movie reviews, TV show reviews, sassy film critique, The Hot Take Vault, honest reviews, pop culture commentary">
+  <meta name="author" content="Sophia Isabel"> <!-- Open Graph for Facebook --> <meta property="og:title" content="Reviews – The Hot Take Vault">
+  <meta property="og:description" content="Brutally honest reviews on movies and TV shows. Unapologetic. Unfiltered. Unbothered.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thehottakevault.github.io/hot-take-vault/2-reviews.html">
+  <meta property="og:image" content="https://thehottakevault.github.io/hot-take-vault/preview.jpg"> <!-- Twitter Card --> <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reviews – The Hot Take Vault">
+  <meta name="twitter:description" content="Unfiltered and witty reviews of films and series — if it flops, it’s roasted.">
+  <meta name="twitter:image" content="https://thehottakevault.github.io/hot-take-vault/preview.jpg">
+  <meta name="twitter:site" content="@thehottakevault"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Styles remain unchanged */
     #genre-list div.active {
       background-color: #4a0077;
       font-weight: bold;
@@ -56,11 +65,11 @@
       text-align: center;
     }
     header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #fff;
-  text-shadow: 0 0 10px #c26aff, 0 0 20px #a23ff5, 0 0 40px #cc88ff;
-}
+      margin: 0;
+      color: #d88aff;
+      text-shadow: 0 0 10px #c26aff, 0 0 20px #a23ff5, 0 0 40px #cc88ff;
+      font-size: 2.8em;
+    }
     nav a {
       color: #b36bff;
       margin: 0 15px;
@@ -113,7 +122,7 @@
       <a href="6-about.html">About</a>
       <a href="7-contact.html">Contact</a>
     </nav>
-  </header> <!-- 🔍 Search Bar --> <div class="search-wrapper">
+  </header> <!-- Search Bar --> <div class="search-wrapper">
     <input type="text" id="search" placeholder="Search reviews or genres..." onclick="toggleGenres()" onblur="hideGenresAfterDelay()" />
     <div id="genre-list">
       <div onclick="showAllReviews()" style="font-weight: bold; background-color:#2a0055;">Show All</div>
@@ -130,9 +139,9 @@
       <div onclick="searchGenre('animated')">Animated</div>
       <div onclick="searchGenre('reality')">Reality / Documentary</div>
     </div>
-  </div> <!-- Back Button --><a href="javascript:history.back()" style="display:inline-block; margin: 20px auto; padding: 10px 20px; background-color:#1f003d; color:#d88aff; border-radius:8px; text-decoration:none; font-weight:bold;">← Go Back</a>
+  </div><a href="javascript:history.back()" style="display:inline-block; margin: 20px auto; padding: 10px 20px; background-color:#1f003d; color:#d88aff; border-radius:8px; text-decoration:none; font-weight:bold;">← Go Back</a>
 
-  <!-- Reviews --> <section class="review-preview" data-genre="horror">
+  <section class="review-preview" data-genre="horror">
     <img src="evil-dead-rise.jpg" alt="Evil Dead Rise Poster">
     <div>
       <h3><a href="3-review-evil-dead-rise.html">🎬 Evil Dead Rise — It Rose... and Then Fell Flat</a></h3>
@@ -144,31 +153,30 @@
     <div>
       <h3><a href="4-review-last-of-us.html">📺 The Last of Us – Season 2: Slay or Nah?</a></h3>
       <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Drama</em></p>
+      <p>Post-apocalyptic prestige or moody filler?</p>
     </div>
   </section> <section class="review-preview" data-genre="supernatural">
     <img src="sinners.jpg" alt="Sinners Poster">
     <div>
       <h3><a href="5-review-sinners.html">🩸 Sinners — It Slaps, but I See the Blood in the Lip Gloss</a></h3>
       <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Supernatural</em></p>
+      <p>Choir, chaos, and cursed lipstick. What's not to love?</p>
     </div>
-  </section> <!-- Footer --> <footer>
+  </section> <footer>
     <p>&copy; 2025 The Hot Take Vault. All sass reserved.</p>
-  </footer> <!-- JavaScript --> <script>
+  </footer> <script>
     function toggleGenres() {
       document.getElementById('genre-list').classList.add('show');
     }
-
     function hideGenresAfterDelay() {
       setTimeout(() => {
         document.getElementById('genre-list').classList.remove('show');
       }, 200);
     }
-
     function searchGenre(genre) {
       const input = genre.toLowerCase();
       document.getElementById('search').value = genre;
       filterReviews(input);
-
       document.querySelectorAll('#genre-list div').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('#genre-list div').forEach(el => {
         if (el.textContent.toLowerCase() === genre.toLowerCase()) {
@@ -176,18 +184,15 @@
         }
       });
     }
-
     function showAllReviews() {
       document.getElementById('search').value = '';
       document.querySelectorAll('.review-preview').forEach(r => r.style.display = 'flex');
       document.querySelectorAll('#genre-list div').forEach(el => el.classList.remove('active'));
     }
-
     document.getElementById('search').addEventListener('input', function () {
       const input = this.value.toLowerCase();
       filterReviews(input);
     });
-
     function filterReviews(input) {
       const reviews = document.querySelectorAll('.review-preview');
       reviews.forEach(review => {
