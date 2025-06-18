@@ -123,7 +123,8 @@
       <a href="6-about.html">About</a>
       <a href="7-contact.html">Contact</a>
     </nav>
-  </header> <div class="search-wrapper">
+  </header>
+  <div class="search-wrapper">
     <input type="text" id="search" placeholder="Search reviews or genres..." onclick="toggleGenres()" onblur="hideGenresAfterDelay()" />
     <div id="genre-list">
       <div onclick="showAllReviews()" style="font-weight: bold; background-color:#2a0055;">Show All</div>
@@ -140,84 +141,87 @@
       <div onclick="searchGenre('animated')">Animated</div>
       <div onclick="searchGenre('reality')">Reality / Documentary</div>
     </div>
-  </div><a href="javascript:history.back()" style="display:inline-block; margin: 20px auto; padding: 10px 20px; background-color:#1f003d; color:#d88aff; border-radius:8px; text-decoration:none; font-weight:bold;">← Go Back</a>
-
-  <section class="review-preview" data-genre="horror">
+  </div>
+  <a href="javascript:history.back()" style="display:inline-block; margin: 20px auto; padding: 10px 20px; background-color:#1f003d; color:#d88aff; border-radius:8px; text-decoration:none; font-weight:bold;">← Go Back</a> <section class="review-preview" data-genre="horror">
     <img src="evil-dead-rise.jpg" alt="Evil Dead Rise Poster">
     <div>
       <h3><a href="3-review-evil-dead-rise.html">🎬 Evil Dead Rise — It Rose... and Then Fell Flat</a></h3>
       <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Horror</em></p>
       <p>Mommy’s possessed and the franchise is regressing...</p>
     </div>
-  </section> <section class="review-preview" data-genre="drama">
+  </section>
+  <section class="review-preview" data-genre="drama">
     <img src="the-last-of-us.jpg" alt="The Last of Us Poster">
     <div>
       <h3><a href="4-review-last-of-us.html">📺 The Last of Us – Season 2: Slay or Nah?</a></h3>
       <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Drama</em></p>
       <p>Moody tension and gym drama meet apocalypse fatigue.</p>
     </div>
-  </section> <section class="review-preview" data-genre="supernatural">
+  </section>
+  <section class="review-preview" data-genre="supernatural">
     <img src="sinners.jpg" alt="Sinners Poster">
     <div>
-      <h3><a href="5-review-sinners.html">🩸 Sinners — Gospel, Grit, and the Vampire Blues</a></h3>
+      <h3><a href="5-review-sinners.html">🩸 Sinners — It Slaps, but I See the Blood in the Lip Gloss</a></h3>
       <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Supernatural</em></p>
-      <p>Jazz horror and gospel vampirism with a dash of righteous chaos.</p>
+      <p>Gospel vampires and jazz hauntings with a twist of sass.</p>
     </div>
-  </section> <section class="review-preview" data-genre="sci-fi">
-    <img src="28-years-later.jpg" alt="28 Years Later Poster">
+  </section>
+  <section class="review-preview" data-genre="horror">
+    <img src="the-conjuring.jpg" alt="The Conjuring: Last Rites Poster">
     <div>
-      <h3><a href="8-review-28-years-later.html">🧟‍♂️ 28 Years Later — Future, Infection, and Fan Fights</a></h3>
-      <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Sci-Fi / Horror</em></p>
-      <p>The title alone stirred the internet — but is this the comeback we need?</p>
+      <h3><a href="6-review-conjuring.html">🕯 The Conjuring: Last Rites — Bless This Mess (One Last Time)</a></h3>
+      <p style="margin: 5px 0; font-size: 0.9em; color: #a880d3;"><em>Genre: Horror</em></p>
+      <p>One last ride with the Warrens? Let’s hope they exorcise the CGI too.</p>
     </div>
   </section> <footer>
     <p>&copy; 2025 The Hot Take Vault. All sass reserved.</p>
-  </footer> <script>
+  </footer>
+  <script>
     function toggleGenres() {
       document.getElementById('genre-list').classList.add('show');
+    }function hideGenresAfterDelay() {
+  setTimeout(() => {
+    document.getElementById('genre-list').classList.remove('show');
+  }, 200);
+}
+
+function searchGenre(genre) {
+  const input = genre.toLowerCase();
+  document.getElementById('search').value = genre;
+  filterReviews(input);
+
+  document.querySelectorAll('#genre-list div').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('#genre-list div').forEach(el => {
+    if (el.textContent.toLowerCase() === genre.toLowerCase()) {
+      el.classList.add('active');
     }
+  });
+}
 
-    function hideGenresAfterDelay() {
-      setTimeout(() => {
-        document.getElementById('genre-list').classList.remove('show');
-      }, 200);
+function showAllReviews() {
+  document.getElementById('search').value = '';
+  document.querySelectorAll('.review-preview').forEach(r => r.style.display = 'flex');
+  document.querySelectorAll('#genre-list div').forEach(el => el.classList.remove('active'));
+}
+
+document.getElementById('search').addEventListener('input', function () {
+  const input = this.value.toLowerCase();
+  filterReviews(input);
+});
+
+function filterReviews(input) {
+  const reviews = document.querySelectorAll('.review-preview');
+  reviews.forEach(review => {
+    const genre = review.dataset.genre.toLowerCase();
+    const content = review.innerText.toLowerCase();
+    if (genre === input || content.includes(input)) {
+      review.style.display = 'flex';
+    } else {
+      review.style.display = 'none';
     }
+  });
+}
 
-    function searchGenre(genre) {
-      const input = genre.toLowerCase();
-      document.getElementById('search').value = genre;
-      filterReviews(input);
-
-      document.querySelectorAll('#genre-list div').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('#genre-list div').forEach(el => {
-        if (el.textContent.toLowerCase() === genre.toLowerCase()) {
-          el.classList.add('active');
-        }
-      });
-    }
-
-    function showAllReviews() {
-      document.getElementById('search').value = '';
-      document.querySelectorAll('.review-preview').forEach(r => r.style.display = 'flex');
-      document.querySelectorAll('#genre-list div').forEach(el => el.classList.remove('active'));
-    }
-
-    document.getElementById('search').addEventListener('input', function () {
-      const input = this.value.toLowerCase();
-      filterReviews(input);
-    });
-
-    function filterReviews(input) {
-      const reviews = document.querySelectorAll('.review-preview');
-      reviews.forEach(review => {
-        const genre = review.dataset.genre.toLowerCase();
-        const content = review.innerText.toLowerCase();
-        if (genre === input || content.includes(input)) {
-          review.style.display = 'flex';
-        } else {
-          review.style.display = 'none';
-        }
-      });
-    }
-  </script></body>
+  </script>
+</body>
 </html>
